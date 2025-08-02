@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recent Transactions Dashboard</title>
+
+  <!-- 🌐 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- 🎨 External CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 💳 Transactions Table Section -->
+  <section class="data-table">
+    <h3>Recent Transactions</h3>
+
+    <!-- 🔍 Filters -->
+    <div class="filters">
+<!-- 📅 Replace input type="date" with dropdown -->
+<div class="filter-group">
+  <label for="date-filter">📅 Filter by Date:</label><br />
+  <select id="date-filter">
+    <option value="">All Dates</option>
+  </select>
+</div>
+
+
+<div class="filter-group">
+  <label for="status-filter">📌 Filter by Status:</label><br />
+  <select id="status-filter">
+    <option value="">All</option>
+    <option value="Success">Success</option>
+    <option value="Pending">Pending</option>
+    <option value="Failed">Failed</option>
+  </select>
+</div>
+    </div>
+
+    <!-- 🧾 Transactions Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="transaction-table-body">
+        <!-- Dynamic rows injected via script.js -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 📜 Script (includes Firebase + logic) -->
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>

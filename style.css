@@ -1,0 +1,109 @@
+/* 🌐 Base Reset & Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f3f6;
+  color: #333;
+  padding: 2rem;
+}
+
+/* 💳 Data Table Container */
+.data-table {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.data-table h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+  font-weight: 700;
+}
+
+/* 🔍 Filter Controls */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group {
+  flex: 1 1 220px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="date"]:focus,
+select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  outline: none;
+}
+
+/* 📊 Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.2rem;
+}
+
+thead {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4;
+  font-size: 1rem;
+}
+
+tbody tr:hover {
+  background-color: #eef6ff;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+/* 🧑‍💻 Responsive Design */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  th, td {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+
+  .data-table {
+    padding: 1.5rem;
+  }
+}
